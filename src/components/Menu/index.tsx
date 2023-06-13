@@ -6,10 +6,10 @@ export default function Menu() {
   const rotas = [{
     label: 'Início',
     to: '/'
-  },{
+  }, {
     label: 'Cardápio',
     to: '/cardapio'
-  },{
+  }, {
     label: 'Sobre',
     to: '/sobre'
   }];
@@ -18,8 +18,10 @@ export default function Menu() {
       <Logo />
       <ul className={styles.menu__list}>
         {rotas.map((rota, index) => (
-          <li className={styles.menu__link} key={index}>
-            <Link to={rota.to}>{rota.label} </Link>
+          <li key={index} className={styles.menu__link}>
+            <Link to={rota.to}>
+              {rota.label}
+            </Link>
           </li>
         ))}
       </ul>
