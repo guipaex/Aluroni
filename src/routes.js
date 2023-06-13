@@ -9,10 +9,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export default function AppRouter() {
   return (
-    <main>
+    <main className='container'>
       <Router>
         <Menu />
-
         <Routes>
           <Route path='/' element={<PaginaPadrao />}>
             <Route index element={<Inicio />} />
